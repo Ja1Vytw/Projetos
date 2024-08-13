@@ -25,19 +25,16 @@ mealList.addEventListener('click', async (e) => {
     }
 });
 
-// Function to fetch meals by ingredient
 async function searchMealsByIngredient(ingredient) {
     try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`);
         const data = await response.json();
         return data.meals;
     } catch (error) {
-        // Show error in console
         console.error('Error fetching data:', error);
     }
 }
 
-// Function to fetch meal details by ID
 async function getMealDetails(mealId) {
     try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
@@ -48,7 +45,6 @@ async function getMealDetails(mealId) {
     }
 }
 
-// Function to display meals in the list
 function displayMeals(meals) {
     mealList.innerHTML = '';
     if (meals) {
@@ -63,11 +59,10 @@ function displayMeals(meals) {
             mealList.appendChild(mealItem);
         });
     } else {
-        mealList.innerHTML = '<p>No meals found. Try another ingredient.</p>';
+        mealList.innerHTML = '<p>Nenhum prato encontrado, por favor, tente outro ingrediente</p>';
     }
 }
 
-// Function to create and display meal details on popup
 function showMealDetailsPopup(meal) {
     mealDetailsContent.innerHTML = `
         <h2 class="recipe-title">${meal.strMeal}</h2>
@@ -107,7 +102,6 @@ async function performSearch() {
     }
 }
 
-// Perform a chicken search on page load
 window.addEventListener('load', () => {
     searchInput.value = 'chicken';
     performSearch();
