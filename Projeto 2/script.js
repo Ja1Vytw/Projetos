@@ -81,7 +81,6 @@ function showMealDetailsPopup(meal) {
     modalContainer.style.display = 'block';
 }
 
-// Event listener for popup close button
 recipeCloseBtn.addEventListener('click', closeRecipeModal);
 
 function closeRecipeModal() {

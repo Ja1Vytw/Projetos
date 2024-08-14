@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quadrante para desenhar em Pixel Art">
+    <meta name="Author" content="Joao Vitor Pereira">
+    <meta name="keywords" content="html, css, javascript, ToDoList, Lista">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do list</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="task-input">
+            <img src="bars-icon.svg">
+            <input type="text" placeholder="Adicione nova tarefa">
+        </div>
+
+        <div class="controls">
+            <div class="filters">
+                <span id="all" class="active">
+                    Tudo
+                </span>
+                <span id="pending">Pendente</span>
+                <span id="completed">Feito</span>
+            </div>
+            <button class="clear-btn">Limpar tudo</button>
+        </div>
+        <ul class="task-box"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
