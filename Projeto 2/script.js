@@ -5,7 +5,6 @@ const modalContainer = document.querySelector('.modal-container');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipeCloseBtn');
 
-// Event listeners
 searchButton.addEventListener('click', async () => {
     const ingredient = searchInput.value.trim();
     if (ingredient) {
